@@ -1,0 +1,5 @@
+- Instalar npm install express mongoose
+- Criar um arquivo app
+- Alter no package.json o nome da main para app.js e adicionar o script de start (para rodar automático)
+- Para variáveis de ambiente, instalar o doteenv
+- Instalar o cors npm install cors
