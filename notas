@@ -5,3 +5,6 @@
 - Instalar o cors npm install cors
 - Criar uma pasta config, para configuração do banco de dados
 - Instalar o nodemon => npm install nodemon
+- Instalar o jwt npm install express-jwt (para autenticações)
+- Instalar o bcrypt => npm install bcrypt
+- Instalar o jsonwebtoken => npm install jsonwebtoken

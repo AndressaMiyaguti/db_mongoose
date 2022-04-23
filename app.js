@@ -1,6 +1,6 @@
 const express = require('express');
 require('./config/db.config')(); //Conecta ao banco de dados
-
+require("./config/db.config")();
 const cors = require('cors');
 
 const app = express();
@@ -25,6 +25,6 @@ const userRouter = require('./routes/user.routes');
 
 app.use(`/api/${VERSION}/users`, userRouter)// vai chegar tudo que for de users e o restante do endereço será configurado depois ( ex: create)
 
-app.listen(4000, () => {
-  console.log("servidor rodando na porta 4000")
+app.listen(Number(process.env.PORT), () => {
+  console.log(` O servidor rodando na porta ${process.env.PORT}`)
 })
