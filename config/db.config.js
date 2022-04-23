@@ -19,7 +19,7 @@ async function connect() {
       }
     );
 
-    console.log("Conectado ao banco de dados:", connection);
+    console.log("Conectado ao banco de dados:", connection.connection.name);
   } catch (err) {
     console.log("Erro de conexão", err);
   }
