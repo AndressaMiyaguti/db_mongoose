@@ -7,4 +7,4 @@
 - Instalar o nodemon => npm install nodemon
 - Instalar o jwt npm install express-jwt (para autenticações)
 - Instalar o bcrypt => npm install bcrypt
-- Instalar o jsonwebtoken => npm install jsonwebtoken
+- Instalar o jsonwebtoken => npm i jsonwebtoken

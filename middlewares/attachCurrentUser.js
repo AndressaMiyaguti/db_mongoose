@@ -1,6 +1,7 @@
-const UserModule = require('../models/user.model');
+const UserModel = require('../models/user.model');
 
-async function attachCurrentUser(req,res){
+//Essa função só poderá ser executada depois do isAuth 
+module.exports = async function attachCurrentUser(req,res, next){
   try{
     const loggedInUser = req.user; //O req.user é definido na linha 14 do isAuth
   const user = await UserModel.findOne({
@@ -13,6 +14,7 @@ async function attachCurrentUser(req,res){
     }
     //Caso o usuário esteja  cadastrado, retornamos o user 
     req.currentUser = user;
+    return next(); //Dá continuidade a execução da aplicação
   
   }catch(err){console.error(err);
     return res.status(500).JSON.stringify(err);}
